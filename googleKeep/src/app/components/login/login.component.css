@@ -1,0 +1,40 @@
+.img{
+    height: 62px;
+    width: 87px;
+    margin-left: -18px;
+}
+
+.fb{
+    margin-left: -13px;
+    height: 30px;
+    width: 185px;
+}
+
+.google{
+    height: 29px;
+    width: 104px;
+}
+
+.color{
+    color:#3f51b5;
+}
+
+.toolbar{
+    width: 110%;
+    margin-left: -8px;
+    margin-top: -8px;
+    color: #fafafa;
+    background: #3f51b5;
+}
+
+.mat-input-flex.mat-form-field-flex{
+    border: 1px solid  #3f51b5;
+ }
+
+ .mat-input-underline.mat-form-field-underline {
+    background: transparent;
+ }
+
+ .mat-input-ripple.mat-form-field-ripple{
+    background-color: transparent; 
+ }

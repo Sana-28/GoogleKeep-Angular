@@ -1,0 +1,12 @@
+.img{
+    height: 62px;
+    width: 87px;
+    margin-left: -18px;
+}
+.toolbar{
+    width: 110%;
+    margin-left: -8px;
+    margin-top: -8px;
+    color: #fafafa;
+    background: #3f51b5;
+}
