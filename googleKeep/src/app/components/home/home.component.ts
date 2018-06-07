@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule, FormGroup, FormControl, FormBuilder} from '@angular/forms'
 import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA } from "@angular/material";
 import { Router, ActivatedRoute, ParamMap,NavigationEnd } from '@angular/router';
+import { HttpService } from '../../services/http.service';
+import { UserResponse } from '../../model/userresponse';
+import { NoteService } from '../../services/note.service';
 
 @Component({
   selector: 'app-home',
@@ -10,32 +13,42 @@ import { Router, ActivatedRoute, ParamMap,NavigationEnd } from '@angular/router'
 })
 export class HomeComponent implements OnInit {
 
-  reminder='/assets/icons/remind.png';
-  crossSvg  = '/assets/icons/cross.svg';
-  searchForm: FormGroup;
-  inputFormControl: FormControl;
+  model       : any={};
+  name        : string;
+  email       : string;
+  user        : UserResponse[];
+  searchForm  : FormGroup;
+  inputFormControl  : FormControl;
+
+  reminder ='/assets/icons/remind.png';
+  crossSvg = '/assets/icons/cross.svg';
 
   title="Google Keep";
 
   constructor( private dialog: MatDialog,
                   private activatedroute: ActivatedRoute,
-                    private router : Router,
-                       private builder: FormBuilder)
-                        { 
-                          this.inputFormControl = new FormControl();
-                          this.searchForm = this.builder.group({
-                           inputFormControl: this.inputFormControl
-                          }); 
+                    private httpServiceObject: HttpService,
+                      private router : Router,
+                       private noteServiceObj: NoteService,
+                        private builder: FormBuilder)
+                          { 
+                            this.inputFormControl = new FormControl();
+                            this.searchForm = this.builder.group({
+                            inputFormControl: this.inputFormControl
+                            }); 
                         }
 
   ngOnInit() {
 
   }
 
-
-
+    /**@method: This method is for getting the logged user */
   loggedUser(){
-
+    this.httpServiceObject.getUser('getuser').subscribe(response => {
+      this.name = response.name;
+      this.email = response.email;
+      console.log('User information', this.user);
+    });
   }
 
   /**@method: This method is for logout */
@@ -47,5 +60,10 @@ export class HomeComponent implements OnInit {
   notify():void{
       alert("No notification");
   };
+
+
+  viewlist(){
+    this.noteServiceObj.changeView();
+  }
 
 }
