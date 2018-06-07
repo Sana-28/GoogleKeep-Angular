@@ -6,6 +6,7 @@
 
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SignupComponent } from './components/signup/signup.component';
@@ -13,6 +14,7 @@ import { SigninComponent } from './components/signin/signin.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent},
   { path: 'signin', component: SignupComponent},
   { path: 'login', component: SigninComponent}
 ]
