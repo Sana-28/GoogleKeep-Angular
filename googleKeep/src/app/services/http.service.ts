@@ -15,6 +15,12 @@ export class HttpService {
 
  private URL= environment.base_url;
 
+ httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json',
+    })
+  };
+
   constructor(private http: HttpClient) { }
 
   postService(url, model):Observable<any>{
