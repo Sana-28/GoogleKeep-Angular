@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpService } from './services/http.service';
 import { LoginService } from './services/login.service';
 import { MaterialModule } from './material.module';
-import { NgModule } from '@angular/core'
+import { NgModule } from '@angular/core';
+import { NoteService } from './services/note.service';
 import { RouterModule } from '@angular/router';
 import { RegisterService } from './services/register.service';
 import { SignupComponent } from './components/signup/signup.component';
@@ -32,7 +33,8 @@ import { HomeComponent } from './components/home/home.component';
 
   providers: [HttpService,
                 LoginService,
-                  RegisterService],
+                 NoteService,
+                    RegisterService],
   
   bootstrap: [AppComponent]
 })
