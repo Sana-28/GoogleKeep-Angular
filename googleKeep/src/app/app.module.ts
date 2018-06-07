@@ -11,13 +11,15 @@ import { RouterModule } from '@angular/router';
 import { RegisterService } from './services/register.service';
 import { SignupComponent } from './components/signup/signup.component';
 import { SigninComponent } from './components/signin/signin.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    HomeComponent
   ],
 
   imports: [
