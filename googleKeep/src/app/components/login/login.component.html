@@ -3,7 +3,7 @@
 </mat-toolbar>
 
 <div class="container" fxLayoutAlign="center center">
-  <mat-card fxFlex="45" style="margin-top: 40px;">
+  <mat-card fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex="45" style="margin-top: 40px;">
     <div fxFlexOffset="10" fxflex="30">
 
       <h3>
@@ -27,18 +27,19 @@
         </div>
 
         <div fxLayout="column" fxLayoutGap="3%">
-            <div fxLayoutAlign="center center" class="color">
-              <h5>All your activity will remain private.</h5>
-            </div>
-
+          <div fxLayoutAlign="center center" class="color">
+            <h5>All your activity will remain private.</h5>
+            <br>
+          </div>
+          <!-- 
             <div fxLayoutAlign="center center" class="color">
               <h5>_______________or_______________</h5>
-            </div>
+            </div> -->
 
           <div>
             <label class="color">Email ID / Username</label>
             <mat-form-field fxFlex fxFlex.gt-xs="420px">
-              <input matInput type="email" name="email" [(ngModel)]="model.email"  [formControl]="email" required>
+              <input matInput type="email" name="email" [(ngModel)]="model.email" [formControl]="email" required>
               <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
             </mat-form-field>
           </div>
@@ -46,8 +47,8 @@
           <div>
             <label class="color">Password</label>
             <mat-form-field fxFlex fxFlex.gt-xs="420px">
-              <input  matInput type="password" name="password" [(ngModel)]="model.password" maxlength="8" [formControl]="password" required>
-               <mat-error  *ngIf="password.invalid">{{getErrorMessage1()}}</mat-error>
+              <input matInput type="password" name="password" [(ngModel)]="model.password" maxlength="8" [formControl]="password" required>
+              <mat-error *ngIf="password.invalid">{{getErrorMessage1()}}</mat-error>
             </mat-form-field>
           </div>
         </div>
