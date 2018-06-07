@@ -1,0 +1,88 @@
+<mat-toolbar class="toolbar">
+    <img src="/assets/icons/bridgeicon.jpg" class="img">
+</mat-toolbar>
+
+<mat-tab-group>
+    <mat-tab label="Register Here">
+        <div class="container" fxLayoutAlign="center center">
+            <mat-card fxFlex="45" style="margin-top: 40px;background-color: #EEE;">
+                <div fxFlexOffset="10" fxflex="30">
+
+                    <h3>
+                        <i>Register</i>
+                    </h3>
+
+                    <form #sigininForm="ngForm" (ngSubmit)="register()">
+
+                        <div fxLayout="column">
+
+                            <div>
+                                <label class="color">Username</label>
+                                <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <input matInput type="text" name="name" [(ngModel)]="model.name" [formControl]="name" required>
+                                    <mat-error *ngIf="name.invalid">{{getErrorMessage1()}}</mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <label class="color">Email Id</label>
+                                <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <input matInput type="email" name="email" [(ngModel)]="model.email" [formControl]="email" required>
+                                    <mat-error *ngIf="email.invalid">{{getErrorMessage2()}}</mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <label class="color">Password</label>
+                                <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <input matInput type="password" name="password" [(ngModel)]="model.password" maxlength="8" [formControl]="password" required>
+                                    <mat-error *ngIf="password.invalid">{{getErrorMessage3()}}</mat-error>
+                                </mat-form-field>
+                            </div>
+
+                            <div>
+                                <label class="color">Mobile Number</label>
+                                <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <input matInput type="mobileNumber" name="mobileNumber" [(ngModel)]="model.mobileNumber" maxlength="12" [formControl]="mobileNumber"
+                                        required>
+                                    <mat-error *ngIf="mobileNumber.invalid">{{getErrorMessage4()}}</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div>
+                            <button mat-raised-button color="primary" type="submit" fxFlex fxFlex.gt-xs="420px">Register</button>
+                        </div>
+
+                        <div>
+                            <span>Already Registered?</span>
+                            <button mat-button color="primary" (click)="signIn()">Sign In
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </mat-card>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="Upload Profile picture here">
+        <div class="container" fxLayoutAlign="center center">
+            <mat-card fxFlex="35" style="margin-top: 40px;background-color: #EEE;">
+                <div fxFlexOffset="10" fxflex="30" flexLayoutGap="10%">
+
+                    <div fxLayout="row">
+                        <button mat-button (click)="handleFileInput($event.target.files)">
+                            <img src="/assets/icons/profile-image.jpg" class="profile">
+                        </button>
+                    </div>
+
+                    <div fxLayout="row"  fxLayoutAlign="center center">
+                        <button mat-raised-button color="primary" type="submit" fxFlex fxFlex.gt-xs="300px">Upload Profile picture</button>
+                    </div>
+                </div>
+
+            </mat-card>
+        </div>
+    </mat-tab>
+</mat-tab-group>

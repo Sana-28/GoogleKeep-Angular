@@ -16,9 +16,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatTabsModule } from '@angular/material/tabs';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-
 
 @NgModule(
     {
@@ -32,6 +32,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             MatCardModule,
             MatFormFieldModule,
             MatStepperModule,
+            MatTabsModule,
             ReactiveFormsModule
         ],
             
@@ -45,6 +46,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             MatIconModule, 
             MatFormFieldModule,
             MatStepperModule,
+            MatTabsModule,
             ReactiveFormsModule    
         ],
     }
