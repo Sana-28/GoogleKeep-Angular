@@ -1,7 +1,7 @@
 <div>
     <mat-toolbar appToolbar class="toptoolbar">
   
-      <div class="toolitems">
+      <div class="toolitems" >
         <button mat-icon-button (click)="sidenav.toggle()" href="#" name="Main menu">
           <mat-icon>menu</mat-icon>
         </button>
@@ -10,8 +10,7 @@
       <div class="toolitems">
         <span>{{title}}</span>
       </div>
-  
-      
+
       <form [formGroup]="searchForm">
         <input type='text' placeholder="Search" [formControl]="inputFormControl">
       </form>
