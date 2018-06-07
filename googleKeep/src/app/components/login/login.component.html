@@ -1,9 +1,10 @@
+
 <mat-toolbar class="toolbar">
   <img src="/assets/icons/bridgeicon.jpg" class="img">
 </mat-toolbar>
 
 <div class="container" fxLayoutAlign="center center">
-  <mat-card fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex="45" style="margin-top: 40px;">
+  <mat-card fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex="45" style="margin-top: 40px;background-color: #EEE;">
     <div fxFlexOffset="10" fxflex="30">
 
       <h3>
@@ -12,16 +13,19 @@
 
       <form #loginForm="ngForm" (ngSubmit)="login()">
 
-        <div fxLayout="row" fxLayoutGap="20%">
+        <div fxLayout="row" fxLayoutGap="35%">
           <div>
             <button mat-button color="primary">
-              <img src="/assets/icons/fb+icon.png" class="fb">
+              <img src="/assets/icons/f.png" class="fb">
+              <label>Facebook</label>
             </button>
+          
           </div>
 
           <div>
             <button mat-button color="primary">
-              <img src="/assets/icons/google-plus.jpg" class="google">
+              <img src="/assets/icons/google-icon.gif" class="google">
+              <label>Google</label>
             </button>
           </div>
         </div>
@@ -36,9 +40,9 @@
               <h5>_______________or_______________</h5>
             </div> -->
 
-          <div>
+          <div class="rowR">
             <label class="color">Email ID / Username</label>
-            <mat-form-field fxFlex fxFlex.gt-xs="420px" class="input">
+            <mat-form-field fxFlex fxFlex.gt-xs="420px">
               <input matInput type="email" name="email" [(ngModel)]="model.email" [formControl]="email" required>
               <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
             </mat-form-field>
