@@ -29,6 +29,7 @@
 
 .mat-input-flex.mat-form-field-flex{
     border: 1px solid  #3f51b5;
+    height: 35px;
  }
 
  .mat-input-underline.mat-form-field-underline {
@@ -38,3 +39,11 @@
  .mat-input-ripple.mat-form-field-ripple{
     background-color: transparent; 
  }
+
+ /* .input{
+    background-color: white;
+ } */
+
+ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    background-color:white;
+} 
