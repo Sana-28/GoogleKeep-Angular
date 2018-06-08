@@ -4,7 +4,6 @@
 
     <li class="li">
       <a title="Fundoo Register" href="/signup" class="anchor">
-        <!-- <span class="topIcon jobs Login">&nbsp;</span> -->
         <div class="logDiv">REGISTER</div>
       </a>
     </li>
@@ -15,39 +14,36 @@
       <div fxFlexOffset="10" fxflex="30">
 
         <h3>
-          <i>Login</i>
+         <strong>Login</strong>
         </h3>
 
         <form #loginForm="ngForm" (ngSubmit)="login()">
 
-          <div fxLayout="row">
+          <div fxLayout="row" fxLayoutGap="13%">
             <a class="fb">
               <img src="/assets/icons/ficon.jpeg" class="fbimg">
               <h5 class="fbtext">Facebook</h5>
             </a>
 
             <a class="fb">
-              <img src="/assets/icons/g.png" class="fbimg">
+              <img src="/assets/icons/images.png" class="gimg">
               <h5 class="fbtext">Google</h5>
             </a>
 
           </div>
 
-          <div fxLayout="row" class="color">
-            <h5>All your activity will remain private.</h5>
+          <div fxLayout="row" fxLayoutAlign="center center" class="color">
+            <span class="msg">All your activity will remain private.</span>
             <br>
           </div>
 
           <div fxLayout="column" fxLayoutGap="1%">
-            <!-- 
-            <div fxLayoutAlign="center center" class="color">
-              <h5>_______________or_______________</h5>
-            </div> -->
 
             <div>
               <label class="txt">Email ID / Username</label>
               <mat-form-field fxFlex fxFlex.gt-xs="420px">
-                <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="email" name="email" [(ngModel)]="model.email" [formControl]="email" required>
+                <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="email" name="email" [(ngModel)]="model.email" [formControl]="email"
+                  required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
               </mat-form-field>
             </div>
@@ -55,17 +51,20 @@
             <div>
               <label class="txt">Password</label>
               <mat-form-field fxFlex fxFlex.gt-xs="420px">
-                <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="password" name="password" [(ngModel)]="model.password" maxlength="8" [formControl]="password" required>
+                <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="password" name="password" [(ngModel)]="model.password"
+                  maxlength="8" [formControl]="password" required>
                 <mat-error *ngIf="password.invalid">{{getErrorMessage1()}}</mat-error>
               </mat-form-field>
             </div>
-            
           </div>
 
           <div>
-            <button mat-button color="primary">Forgot Password?
-              <!-- <a href="/forgotpass">Forgot Password?</a> -->
-            </button>
+              <!-- <a>
+                  <h5 class= "forgot" (click)="forgot()">Forgot Password?</h5>
+              </a> -->
+              <a>
+                  <h5 class= "forgot" (click)="OpenforgotDialog()">Forgot Password?</h5>
+              </a>
           </div>
 
           <div>
@@ -74,8 +73,7 @@
 
           <div>
             <span class="txt">Not a member yet?</span>
-            <button mat-button color="primary" (click)="signIn()">Register now
-              <!-- <a [routerLink]="['/signin']"></a> -->
+            <button mat-button color="primary" (click)="signUp()">Register now
             </button>
           </div>
         </form>

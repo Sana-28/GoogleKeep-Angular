@@ -53,7 +53,11 @@ export class SigninComponent implements OnInit {
     });
 }
 
-  signIn(){
-    this.router.navigate(['/signin']);
+  signUp(){
+    this.router.navigate(['/signup']);
+  }
+
+  forgot(){
+    this.router.navigate(['/forgotpassword']);
   }
 }
