@@ -2,6 +2,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule }from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForgotPassService } from './services/forgotpass.service';
 import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassword.component';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -35,10 +36,11 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     MaterialModule,
   ],
 
-  providers: [HttpService,
-                LoginService,
-                 NoteService,
-                    RegisterService],
+  providers: [ForgotPassService,
+                HttpService,
+                  LoginService,
+                    NoteService,
+                      RegisterService],
   
   bootstrap: [AppComponent]
 })
