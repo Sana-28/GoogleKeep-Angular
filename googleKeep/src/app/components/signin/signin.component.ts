@@ -5,7 +5,9 @@
 */
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { ForgotpasswordComponent } from '../forgotpassword/forgotpassword.component';
 import { LoginService } from '../../services/login.service';
+import { MatDialog, MatDialogConfig, MAT_DIALOG_DATA } from "@angular/material";
 import { OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { Validators } from '@angular/forms';
@@ -36,6 +38,7 @@ export class SigninComponent implements OnInit {
   }
 
   constructor(private loginServiceObj : LoginService,
+               private dialog: MatDialog,
                  private router: Router) 
                  { }
 
@@ -57,7 +60,18 @@ export class SigninComponent implements OnInit {
     this.router.navigate(['/signup']);
   }
 
-  forgot(){
+  /*forgot(){
     this.router.navigate(['/forgotpassword']);
-  }
+  }*/
+
+
+  /**@method:This method is to open forgot password dialog */
+  OpenforgotDialog(){
+    this.dialog.open(ForgotpasswordComponent, {
+
+      width: '578px',
+      height: '350px'
+    });
+  };
+
 }
