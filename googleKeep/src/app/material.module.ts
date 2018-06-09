@@ -17,7 +17,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatTabsModule } from '@angular/material/tabs';
-
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -26,6 +25,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -50,6 +50,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             MatNativeDateModule,
             MatChipsModule,
             MatCheckboxModule,
+            MatRadioModule,
             ReactiveFormsModule
         ],
             
@@ -72,6 +73,7 @@ import { ReactiveFormsModule } from '@angular/forms';
             MatNativeDateModule,
             MatChipsModule,
             MatCheckboxModule,
+            MatRadioModule,
             ReactiveFormsModule    
         ],
     }
