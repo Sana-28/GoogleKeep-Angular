@@ -2,6 +2,13 @@
 
     <img src="/assets/icons/bridgeicon.jpg" class="img">
 
+    <div class="top">
+        <span class="font">Already Registered?</span>
+        <button mat-button color="primary" (click)="signIn()">Login
+        </button>
+    </div>
+
+
     <mat-tab-group>
         <mat-tab label="Register Here">
             <div class="container" fxLayoutAlign="center center">
@@ -14,7 +21,12 @@
 
                         <form #sigininForm="ngForm" (ngSubmit)="register()">
 
-                            <div fxLayout="row" fxLayoutGap="15%">
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <span class="msgdiv">Fill my details with</span>
+                                <br>
+                            </div>
+
+                            <div fxLayout="row" fxLayoutGap="68px">
                                 <a class="fb">
                                     <img src="/assets/icons/ficon.jpeg" class="fbimg">
                                     <h5 class="fbtext">Facebook</h5>
@@ -25,6 +37,11 @@
                                     <h5 class="fbtext">Google</h5>
                                 </a>
 
+                            </div>
+
+                            <div fxLayout="row" fxLayoutAlign="center center">
+                                <span class="msg">We will not post anything without your permission.</span>
+                                <br>
                             </div>
 
                             <div fxLayout="column">
@@ -101,5 +118,5 @@
                 </mat-card>
             </div>
         </mat-tab>
-        </mat-tab-group>
+    </mat-tab-group>
 </body>

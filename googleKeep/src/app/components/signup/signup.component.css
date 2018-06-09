@@ -11,7 +11,7 @@
 .toolbar{
     /* margin-left: 8px; */
     margin-top: -8px;
-    background:rgb(32, 28, 28);
+    background: white;
 }
 
 .mat-input-flex.mat-form-field-flex{
@@ -76,6 +76,17 @@
     margin-top: 7px;
 }
 
+.msgdiv{
+    font-size: 13px;
+    color: #666;
+    margin-top: -12px;
+}
+
+.font{
+    font: inherit;
+    color: #666;
+}
+
 .txt{
     font-size: 13px;
     color: #333;
@@ -91,4 +102,9 @@
 
 .mat-tab-label, .mat-tab-link {
      color: whitesmoke;
+}
+
+.top{
+    margin-left: 883px;
+    margin-top: -40px;
 }
