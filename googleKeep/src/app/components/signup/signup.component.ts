@@ -63,7 +63,6 @@ export class SignupComponent implements OnInit {
   this.registerSericeObj.register(this.model)
                           .subscribe(response =>
                             data=>console.log(data));
-                           alert("Registered Successfully..");
                           }
 
   signIn(){
@@ -83,6 +82,4 @@ handleFileInput(event) {
                        console.log("Image uploaded successfully..");
   });
 }
-
-
 }
