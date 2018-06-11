@@ -1,3 +1,8 @@
+/**
+* @author: SANA SHAIKh
+* @since: 6/June/2018
+* @description: This is reset password component contains method to call reset password api   
+*/
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { HttpService } from '../../services/http.service';
@@ -29,12 +34,11 @@ export class ResetpasswordComponent implements OnInit {
 
   /**@method: This method is set new password */
   reset(){
-    
+    debugger;
     console.log(this.model);
     var urlPath = 'resetnewpassword'+window.location.search;
     this.resetSerObject.postService(urlPath,this.model)
                         .subscribe(data=>{
                           console.log(data)});
   }
-
 }
