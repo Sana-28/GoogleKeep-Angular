@@ -1,12 +1,6 @@
 <body>
   <mat-toolbar class="toolbar">
-    <img src="/assets/icons/bridgeicon.jpg" class="img">
-
-    <li class="li">
-      <a title="Fundoo Register" href="/signup" class="anchor">
-        <div class="logDiv">REGISTER</div>
-      </a>
-    </li>
+             <img src="/assets/icons/bridgeicon.jpg" class="img">
   </mat-toolbar>
 
   <div class="container" fxLayoutAlign="center center" style="background-color: #f0f0f0;">
@@ -19,15 +13,15 @@
 
         <form #loginForm="ngForm" (ngSubmit)="login()">
 
-          <div fxLayout="row" fxLayoutGap="13%">
+          <div fxLayout="row" fxFlex.lt-sm="45" fxFlex.sm="40" fxLayoutGap="45px">
             <a class="fb">
-              <img src="/assets/icons/ficon.jpeg" class="fbimg">
+              <img src="/assets/icons/ficon.jpeg" class="fbimg" fxFlexOffset="15px" >
               <h5 class="fbtext">Facebook</h5>
             </a>
 
             <a class="fb">
-              <img src="/assets/icons/images.png" class="gimg">
-              <h5 class="fbtext">Google</h5>
+              <img src="/assets/icons/images.png" class="gimg" fxFlexOffset="20px">
+              <h5 class="gtext">Google</h5>
             </a>
 
           </div>
@@ -37,11 +31,11 @@
             <br>
           </div>
 
-          <div fxLayout="column" fxLayoutGap="1%">
+          <div fxLayout="column" fxLayoutGap="2%">
 
             <div>
               <label class="txt">Email ID / Username</label>
-              <mat-form-field fxFlex fxFlex.gt-xs="420px">
+              <mat-form-field fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="450px">
                 <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="email" name="email" [(ngModel)]="model.email" [formControl]="email"
                   required>
                 <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
@@ -49,8 +43,8 @@
             </div>
 
             <div>
-              <label class="txt">Password</label>
-              <mat-form-field fxFlex fxFlex.gt-xs="420px">
+              <label class="txt">Your Password</label>
+              <mat-form-field fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="450px">
                 <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="password" name="password" [(ngModel)]="model.password"
                   maxlength="8" [formControl]="password" required>
                 <mat-error *ngIf="password.invalid">{{getErrorMessage1()}}</mat-error>
@@ -68,7 +62,7 @@
           </div>
 
           <div>
-            <button mat-raised-button color="primary" type="submit" fxFlex fxFlex.gt-xs="420px">Login</button>
+            <button mat-raised-button color="primary" type="submit" fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="450px">Login</button>
           </div>
 
           <div>

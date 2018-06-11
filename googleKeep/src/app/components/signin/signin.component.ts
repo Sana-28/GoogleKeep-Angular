@@ -47,6 +47,7 @@ export class SigninComponent implements OnInit {
 
   /**@method:This method is to call login APi */
   login(): void {
+    debugger;
     console.log("loginForm", this.model);
     this.loginServiceObj.login(this.model)
                           .subscribe(response =>
@@ -69,7 +70,7 @@ export class SigninComponent implements OnInit {
   OpenforgotDialog(){
     this.dialog.open(ForgotpasswordComponent, {
 
-      width: '578px',
+      width: '550px',
       height: '350px'
     });
   };

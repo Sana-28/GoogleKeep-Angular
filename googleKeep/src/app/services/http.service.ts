@@ -25,7 +25,7 @@ export class HttpService {
   constructor(private http: HttpClient) { }
 
   postService(url, model):Observable<any>{
-     
+     debugger;
     console.log(url, model);
     var urlpath = this.URL.concat(url);
     console.log(urlpath);

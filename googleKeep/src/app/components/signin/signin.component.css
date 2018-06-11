@@ -13,25 +13,32 @@
     cursor: pointer;
 }
 
+.gtext{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: rgba(102,102,102,.87);
+    font-size: 13px;
+}
+
 .gimg{
-    height: 24px;
-    margin-top: 6px;
-    margin-left: 22px;
-    width: 41px;
+    height: 29px;
+    margin-top: 3px;
+    /* margin-left: 22px; */
+    width: 29px;
 }
 
 .fbimg{
     height: 25px;
     margin-top: 5px;
-    margin-left: 30px;
+    /* margin-left: 30px; */
     width: 41px;
 }
 
 .fbtext{
-    margin-top: -21px;
+    margin-top: 8px;
     color: rgba(102,102,102,.87);
     font-size: 13px;
-    margin-left: 69px;
+    /* margin-left: 69px; */
 }
 
 a:active, a:hover {
@@ -53,11 +60,6 @@ a{
 }
 
 .toolbar{
-    /* width: 110%;
-    margin-left: -8px;
-    margin-top: -8px; */
-    color: #fafafa;
-    /* background: #3f51b5; */
     background-color: #fff;
 }
 
@@ -92,7 +94,6 @@ a{
 
 .li{
     margin-top: -61px;
-    margin-left: 751px;
     font-size: small;
 }
 
@@ -100,7 +101,7 @@ a{
     margin-top: 29px;
 }
 
-@media screen and (max-width: 900px) and (min-width: 600px), (min-width: 1100px)
+@media screen and (max-width: 900px) and (min-width: 50px), (min-width: 1100px)
     {
         body{
           background-color: #f0f0f0;

@@ -12,7 +12,7 @@
     <mat-tab-group>
         <mat-tab label="Register Here">
             <div class="container" fxLayoutAlign="center center">
-                <mat-card fxFlex="45" style="margin-top: 25px;box-shadow: 0 2px 20px rgba(0,0,0,.19), 0 4px 6px rgba(0,0,0,.23);">
+                <mat-card fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex="45" style="margin-top: 25px;box-shadow: 0 2px 20px rgba(0,0,0,.19), 0 4px 6px rgba(0,0,0,.23);">
                     <div fxFlexOffset="10" fxflex="30">
 
                         <h3>
@@ -22,33 +22,33 @@
                         <form #sigininForm="ngForm" (ngSubmit)="register()">
 
                             <div fxLayout="row" fxLayoutAlign="center center">
-                                <span class="msgdiv">Fill my details with</span>
+                                <span class="msgdiv">Register mySelf with</span>
                                 <br>
                             </div>
 
-                            <div fxLayout="row" fxLayoutGap="68px">
+                            <div fxLayout="row" fxLayoutGap="82px">
                                 <a class="fb">
-                                    <img src="/assets/icons/ficon.jpeg" class="fbimg">
+                                    <img src="/assets/icons/ficon.jpeg" class="fbimg" fxFlex.lt-sm="20" fxFlex.sm="20" >
                                     <h5 class="fbtext">Facebook</h5>
                                 </a>
 
                                 <a class="fb">
-                                    <img src="/assets/icons/images.png" class="gimg">
+                                    <img src="/assets/icons/images.png" class="gimg" fxFlex.lt-sm="20" fxFlex.sm="20" fxFlex>
                                     <h5 class="fbtext">Google</h5>
                                 </a>
 
                             </div>
 
                             <div fxLayout="row" fxLayoutAlign="center center">
-                                <span class="msg">We will not post anything without your permission.</span>
+                                <span class="msg" fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex>We will not post anything without your permission.</span>
                                 <br>
                             </div>
 
-                            <div fxLayout="column">
+                            <div fxLayout="column" fxLayoutGap="2%">
 
                                 <div style="margin-top: 19px;">
                                     <label class="txt">Username</label>
-                                    <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <mat-form-field fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="480px">
                                         <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="text" name="name" [(ngModel)]="model.name" [formControl]="name"
                                             required>
                                         <mat-error *ngIf="name.invalid">{{getErrorMessage1()}}</mat-error>
@@ -57,7 +57,7 @@
 
                                 <div>
                                     <label class="txt">Email Id</label>
-                                    <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <mat-form-field fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="480px">
                                         <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="email" name="email" [(ngModel)]="model.email" [formControl]="email"
                                             required>
                                         <mat-error *ngIf="email.invalid">{{getErrorMessage2()}}</mat-error>
@@ -66,7 +66,7 @@
 
                                 <div>
                                     <label class="txt">Password</label>
-                                    <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <mat-form-field fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="480px">
                                         <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="password" name="password" [(ngModel)]="model.password"
                                             maxlength="8" [formControl]="password" required>
                                         <mat-error *ngIf="password.invalid">{{getErrorMessage3()}}</mat-error>
@@ -74,8 +74,8 @@
                                 </div>
 
                                 <div>
-                                    <label class="txt">Mobile Number</label>
-                                    <mat-form-field fxFlex fxFlex.gt-xs="420px">
+                                    <label class="txt">Mobile No</label>
+                                    <mat-form-field fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="480px">
                                         <input fxFlexOffset="15px" style="margin-top: -12px;" matInput type="mobileNumber" name="mobileNumber" [(ngModel)]="model.mobileNumber"
                                             maxlength="12" [formControl]="mobileNumber" required>
                                         <mat-error *ngIf="mobileNumber.invalid">{{getErrorMessage4()}}</mat-error>
@@ -84,7 +84,7 @@
                             </div>
 
                             <div>
-                                <button mat-raised-button color="primary" type="submit" fxFlex fxFlex.gt-xs="420px">Register</button>
+                                <button mat-raised-button color="primary" type="submit" fxFlex.lt-sm="90" fxFlex.sm="80" fxFlex fxFlex.gt-xs="480px">Register</button>
                             </div>
 
                             <div>
@@ -102,17 +102,21 @@
         <mat-tab label="Upload Profile picture here">
             <div class="container" fxLayoutAlign="center center">
                 <mat-card fxFlex="35" style="margin-top: 40px;box-shadow: 0 2px 20px rgba(0,0,0,.19), 0 4px 6px rgba(0,0,0,.23);">
-                    <div fxFlexOffset="10" fxflex="30" flexLayoutGap="10%">
+                    <div fxFlexOffset="18" fxflex="30" flexLayoutGap="10%">
+
+                        <img style="margin-left: 282px; margin-top: -19px;" src="{{crossSvg}}" (click)="cross('null')">
 
                         <div fxLayout="row">
                             <button mat-button (click)="handleFileInput($event.target.files)">
-                                <img src="/assets/icons/profile-image.jpg" class="profile">
+                                <img src="/assets/icons/dummy-user.jpg" class="image-circle">
                             </button>
+
                         </div>
 
                         <div fxLayout="row" fxLayoutAlign="center center">
-                            <button mat-raised-button color="primary" type="submit" fxFlex fxFlex.gt-xs="300px">Upload Profile picture</button>
+                            <button mat-raised-button color="primary" type="submit" fxFlex fxFlex.gt-xs="250px">Upload Profile picture</button>
                         </div>
+
                     </div>
 
                 </mat-card>

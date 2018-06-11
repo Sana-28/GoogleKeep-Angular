@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { RegisterService } from '../../services/register.service';
 import { Validators} from '@angular/forms';
 import { ViewEncapsulation } from '@angular/core';
+import { SigninComponent } from '../signin/signin.component';
 
 @Component({
   selector: 'app-signin',
@@ -20,6 +21,7 @@ import { ViewEncapsulation } from '@angular/core';
 export class SignupComponent implements OnInit {
 
  model: any={};
+ crossSvg  = '/assets/icons/cross.svg';
 
  name = new FormControl('', [Validators.required]);
  getErrorMessage1() {
@@ -50,7 +52,8 @@ export class SignupComponent implements OnInit {
  }
 
   constructor(private router: Router,
-                private registerSericeObj: RegisterService) { }
+                private registerSericeObj: RegisterService) 
+                  { }
 
   ngOnInit() {
   }
@@ -58,7 +61,7 @@ export class SignupComponent implements OnInit {
   
  /**@method:This method is to call register Api */
  register():void{
-    
+    debugger;
   console.log(this.model);
   this.registerSericeObj.register(this.model)
                           .subscribe(response =>
@@ -81,5 +84,9 @@ handleFileInput(event) {
                       .subscribe(response=>{
                        console.log("Image uploaded successfully..");
   });
+}
+
+cross(){
+  this.model=null;
 }
 }
